@@ -7,11 +7,8 @@ int main() {
     auto size = Example::GetWindowSize();
     InitWindow(size.x, size.y, TextFormat("Raylib RmlUi %s", Example::GetWindowTitle()));
     SetTargetFPS(500);
-
     SetExitKey(0);
-
     Example::Initialize();
-
     while (Example::RunProgram()) {
         if (WindowShouldClose()) {
             Example::StopProgram();
@@ -33,7 +30,7 @@ int main() {
 
         EndDrawing();
     }
-
+    
     Example::DeInitialize();
 
     CloseWindow();

@@ -3,6 +3,7 @@ project(RmlUI_Example)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_C_STANDARD 99)
+set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 
 set(BUILD_SHARED_LIBS ON)
 
@@ -55,8 +56,8 @@ set(benchmarkSource
 set (bitmapfontSource
      src/samples/basic/bitmapfont.cpp
      src/samples/exampleEvent.cpp
-     src/samples/basic/bitmapfont/fontEngineBitmap.cpp
-     src/samples/basic/bitmapfont/fontEngineInterfaceBitmap.cpp
+     src/samples/basic/bitmapfont/FontEngineBitmap.cpp
+     src/samples/basic/bitmapfont/FontEngineInterfaceBitmap.cpp
      )
 
 set (databindingSource

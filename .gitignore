@@ -32,6 +32,9 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
+# VSCODE
+.vscode/
+
 # User-specific stuff:
 .idea/workspace.xml
 .idea/tasks.xml
@@ -58,6 +61,8 @@
 **/*.cbp
 **/CMakeScripts
 **/compile_commands.json
+builddir/
+build/
 
 # Gradle:
 .idea/gradle.xml

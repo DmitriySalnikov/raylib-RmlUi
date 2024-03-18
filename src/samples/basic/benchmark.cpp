@@ -10,6 +10,7 @@ Rml::Vector2i Example::GetWindowSize() {
 }
 
 void Example::Initialize() {
+    Rml::Log::Message(Rml::Log::LT_INFO, "Initializing benchmark example\n");
     Sample::runGame = RaylibRmlUi::Initialize(1800, 1000);
 
     if (!Sample::runGame) {

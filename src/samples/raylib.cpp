@@ -7,10 +7,9 @@ Rml::Vector2i Example::GetWindowSize() {
 }
 
 void Example::Initialize() {
+    Rml::Log::Message(Rml::Log::LT_INFO, "Initializing Raylib example\n");
     RaylibRmlUi::Initialize(1280, 720);
-
     RaylibRmlUi::LoadFont("UbuntuMono-Regular.ttf");
-
     RaylibRmlUi::LoadRml("raylib.rml", "index", true);
 }
 

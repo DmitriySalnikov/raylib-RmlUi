@@ -2,7 +2,7 @@
 #include "raylibFileInterface.h"
 #include <fstream>
 
-const std::filesystem::path dir("../../assets/");
+const std::filesystem::path dir("./assets/");
 
 inline bool StartsWith(const std::string &text, const std::string &ending) {
     if (ending.size() > text.size()) {

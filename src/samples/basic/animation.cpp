@@ -12,6 +12,7 @@ Rml::Vector2i Example::GetWindowSize() {
 }
 
 void Example::Initialize() {
+    Rml::Log::Message(Rml::Log::LT_INFO, "Initializing animation example\n");
     Sample::runLoop = true;
     Sample::singleLoop = false;
     Sample::nudge = 0;
@@ -46,16 +47,16 @@ void Example::Initialize() {
     }
     {
         auto el = document->GetElementById("high_scores");
-        el->Animate("margin-left", Property(0.f, Property::PX), 0.3f, Tween{ Tween::Sine, Tween::In }, 10, true, 1.f);
-        el->AddAnimationKey("margin-left", Property(100.f, Property::PX), 3.0f, Tween{ Tween::Circular, Tween::Out });
+        el->Animate("margin-left", Property(0.f, Unit::PX), 0.3f, Tween{ Tween::Sine, Tween::In }, 10, true, 1.f);
+        el->AddAnimationKey("margin-left", Property(100.f, Unit::PX), 3.0f, Tween{ Tween::Circular, Tween::Out });
     }
     {
         auto el = document->GetElementById("options");
-        el->Animate("image-color", Property(Colourb(128, 255, 255, 255), Property::COLOUR), 0.3f, Tween{}, -1, false);
-        el->AddAnimationKey("image-color", Property(Colourb(128, 128, 255, 255), Property::COLOUR), 0.3f);
-        el->AddAnimationKey("image-color", Property(Colourb(0, 128, 128, 255), Property::COLOUR), 0.3f);
-        el->AddAnimationKey("image-color", Property(Colourb(64, 128, 255, 0), Property::COLOUR), 0.9f);
-        el->AddAnimationKey("image-color", Property(Colourb(255, 255, 255, 255), Property::COLOUR), 0.3f);
+        el->Animate("image-color", Property(Colourb(128, 255, 255, 255), Unit::COLOUR), 0.3f, Tween{}, -1, false);
+        el->AddAnimationKey("image-color", Property(Colourb(128, 128, 255, 255), Unit::COLOUR), 0.3f);
+        el->AddAnimationKey("image-color", Property(Colourb(0, 128, 128, 255), Unit::COLOUR), 0.3f);
+        el->AddAnimationKey("image-color", Property(Colourb(64, 128, 255, 0), Unit::COLOUR), 0.9f);
+        el->AddAnimationKey("image-color", Property(Colourb(255, 255, 255, 255), Unit::COLOUR), 0.3f);
     }
     {
         auto el = document->GetElementById("exit");
@@ -67,34 +68,34 @@ void Example::Initialize() {
     // Transform tests
     {
         auto el = document->GetElementById("generic");
-        auto p = Transform::MakeProperty({ Transforms::TranslateY{ 50, Property::PX }, Transforms::Rotate3D{ 0, 0, 1, -90, Property::DEG }, Transforms::ScaleY{ 0.8f }});
+        auto p = Transform::MakeProperty({ Transforms::TranslateY{ 50, Unit::PX }, Transforms::Rotate3D{ 0, 0, 1, -90, Unit::DEG }, Transforms::ScaleY{ 0.8f }});
         el->Animate("transform", p, 1.5f, Tween{ Tween::Sine, Tween::InOut }, -1, true);
     }
     {
         auto el = document->GetElementById("combine");
-        auto p = Transform::MakeProperty({ Transforms::Translate2D{ 50, 50, Property::PX }, Transforms::Rotate2D(1215) });
+        auto p = Transform::MakeProperty({ Transforms::Translate2D{ 50, 50, Unit::PX }, Transforms::Rotate2D(1215) });
         el->Animate("transform", p, 8.0f, Tween{}, -1, true);
     }
     {
         auto el = document->GetElementById("decomposition");
-        auto p = Transform::MakeProperty({ Transforms::TranslateY{ 50, Property::PX }, Transforms::Rotate3D{ 0.8f, 0, 1, 110, Property::DEG }});
+        auto p = Transform::MakeProperty({ Transforms::TranslateY{ 50, Unit::PX }, Transforms::Rotate3D{ 0.8f, 0, 1, 110, Unit::DEG }});
         el->Animate("transform", p, 1.3f, Tween{ Tween::Quadratic, Tween::InOut }, -1, true);
     }
 
     // Mixed units tests
     {
         auto el = document->GetElementById("abs_rel");
-        el->Animate("margin-left", Property(50.f, Property::PERCENT), 1.5f, Tween{}, -1, true);
+        el->Animate("margin-left", Property(50.f, Unit::PERCENT), 1.5f, Tween{}, -1, true);
     }
     {
         auto el = document->GetElementById("abs_rel_transform");
-        auto p = Transform::MakeProperty({ Transforms::TranslateX{ 0, Property::PX }});
+        auto p = Transform::MakeProperty({ Transforms::TranslateX{ 0, Unit::PX }});
         el->Animate("transform", p, 1.5f, Tween{}, -1, true);
     }
     {
         auto el = document->GetElementById("animation_event");
-        el->Animate("top", Property(Math::RandomReal(250.f), Property::PX), 1.5f, Tween{ Tween::Cubic, Tween::InOut });
-        el->Animate("left", Property(Math::RandomReal(250.f), Property::PX), 1.5f, Tween{ Tween::Cubic, Tween::InOut });
+        el->Animate("top", Property(Math::RandomReal(250.f), Unit::PX), 1.5f, Tween{ Tween::Cubic, Tween::InOut });
+        el->Animate("left", Property(Math::RandomReal(250.f), Unit::PX), 1.5f, Tween{ Tween::Cubic, Tween::InOut });
     }
 }
 

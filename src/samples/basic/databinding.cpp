@@ -15,6 +15,7 @@ Rml::Vector2i Example::GetWindowSize() {
 }
 
 void Example::Initialize() {
+    Rml::Log::Message(Rml::Log::LT_INFO, "Initializing databinding example\n");
     Sample::runGame = RaylibRmlUi::Initialize(1600, 900);
 
     if (!Sample::runGame) {

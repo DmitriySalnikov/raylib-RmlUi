@@ -2,7 +2,7 @@
 #include "raylibRmlUi.h"
 #include "samples/sample.h"
 #include "samples/event.h"
-#include "samples/basic/bitmapfont/fontEngineInterfaceBitmap.h"
+#include "samples/basic/bitmapfont/FontEngineInterfaceBitmap.h"
 
 Rml::ElementDocument* document;
 std::unique_ptr<FontEngineInterfaceBitmap> fontEngine;
@@ -12,6 +12,7 @@ Rml::Vector2i Example::GetWindowSize() {
 }
 
 void Example::Initialize() {
+    Rml::Log::Message(Rml::Log::LT_INFO, "Initializing bitmapfont example\n");
     fontEngine = Rml::MakeUnique<FontEngineInterfaceBitmap>();
     Rml::SetFontEngineInterface(fontEngine.get());
 
@@ -21,7 +22,7 @@ void Example::Initialize() {
         return;
     }
 
-    if (!Rml::LoadFontFace("samples/basic/bitmapfont/Comfortaa_Regular_22.fnt")) {
+    if (!Rml::LoadFontFace("samples/basic/bitmapfont/data/Comfortaa_Regular_22.fnt")) {
         Sample::runGame = false;
         return;
     }
@@ -29,7 +30,7 @@ void Example::Initialize() {
     ExampleEventInstancer eventListenerInstancer;
     Rml::Factory::RegisterEventListenerInstancer(&eventListenerInstancer);
 
-    RaylibRmlUi::LoadRml("samples/basic/bitmapfont.rml", "bitmapfont", true);
+    RaylibRmlUi::LoadRml("samples/basic/bitmapfont/data/bitmapfont.rml", "bitmapfont", true);
 
     document = RaylibRmlUi::GetPage("bitmapfont");
 

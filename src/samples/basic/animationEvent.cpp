@@ -27,17 +27,17 @@ void ExampleEvent::ProcessEvent(Rml::Event &event) {
                 Sample::nudge = -1;
             } else if (key_identifier == Rml::Input::KI_LEFT) {
                 auto el = RaylibRmlUi::Context->GetRootElement()->GetElementById("keyevent_response");
-                if (el) el->Animate("left", Property{ -200.f, Property::DP }, 0.5, Tween{ Tween::Cubic });
+                if (el) el->Animate("left", Property{ -200.f, Unit::DP }, 0.5, Tween{ Tween::Cubic });
             } else if (key_identifier == Rml::Input::KI_RIGHT) {
                 auto el = RaylibRmlUi::Context->GetRootElement()->GetElementById("keyevent_response");
-                if (el) el->Animate("left", Property{ 200.f, Property::DP }, 0.5, Tween{ Tween::Cubic });
+                if (el) el->Animate("left", Property{ 200.f, Unit::DP }, 0.5, Tween{ Tween::Cubic });
             } else if (key_identifier == Rml::Input::KI_UP) {
                 auto el = RaylibRmlUi::Context->GetRootElement()->GetElementById("keyevent_response");
-                auto offset_right = Property{ 200.f, Property::DP };
-                if (el) el->Animate("left", Property{ 0.f, Property::PX }, 0.5, Tween{ Tween::Cubic }, 1, true, 0, &offset_right);
+                auto offset_right = Property{ 200.f, Unit::DP };
+                if (el) el->Animate("left", Property{ 0.f, Unit::PX }, 0.5, Tween{ Tween::Cubic }, 1, true, 0, &offset_right);
             } else if (key_identifier == Rml::Input::KI_DOWN) {
                 auto el = RaylibRmlUi::Context->GetRootElement()->GetElementById("keyevent_response");
-                if (el) el->Animate("left", Property{ 0.f, Property::PX }, 0.5, Tween{ Tween::Cubic });
+                if (el) el->Animate("left", Property{ 0.f, Unit::PX }, 0.5, Tween{ Tween::Cubic });
             }
         }
             break;
@@ -53,8 +53,8 @@ void ExampleEvent::ProcessEvent(Rml::Event &event) {
         case EventId::Animationend: {
             auto el = event.GetTargetElement();
             if (el->GetId() == "animation_event") {
-                el->Animate("top", Property(Math::RandomReal(200.f), Property::PX), 1.2f, Tween{ Tween::Cubic, Tween::InOut });
-                el->Animate("left", Property(Math::RandomReal(100.f), Property::PERCENT), 0.8f, Tween{ Tween::Cubic, Tween::InOut });
+                el->Animate("top", Property(Math::RandomReal(200.f), Unit::PX), 1.2f, Tween{ Tween::Cubic, Tween::InOut });
+                el->Animate("left", Property(Math::RandomReal(100.f), Unit::PERCENT), 0.8f, Tween{ Tween::Cubic, Tween::InOut });
             }
         }
             break;
