@@ -14,113 +14,115 @@ void Initialize() {
 
     initialized = true;
 
-    keyMap[KEY_COMMA] = Rml::Input::KI_OEM_COMMA;
-    keyMap[KEY_APOSTROPHE] = Rml::Input::KI_OEM_7;
-    keyMap[KEY_MINUS] = Rml::Input::KI_OEM_MINUS;
-    keyMap[KEY_PERIOD] = Rml::Input::KI_OEM_PERIOD;
-    keyMap[KEY_SLASH] = Rml::Input::KI_OEM_2;
-    keyMap[KEY_ZERO] = Rml::Input::KI_0;
-    keyMap[KEY_ONE] = Rml::Input::KI_1;
-    keyMap[KEY_TWO] = Rml::Input::KI_2;
-    keyMap[KEY_THREE] = Rml::Input::KI_3;
-    keyMap[KEY_FOUR] = Rml::Input::KI_4;
-    keyMap[KEY_FIVE] = Rml::Input::KI_5;
-    keyMap[KEY_SIX] = Rml::Input::KI_6;
-    keyMap[KEY_SEVEN] = Rml::Input::KI_7;
-    keyMap[KEY_EIGHT] = Rml::Input::KI_8;
-    keyMap[KEY_NINE] = Rml::Input::KI_9;
-    keyMap[KEY_SEMICOLON] = Rml::Input::KI_OEM_1;
-    keyMap[KEY_EQUAL] = Rml::Input::KI_OEM_PLUS;
-    keyMap[KEY_A] = Rml::Input::KI_A;
-    keyMap[KEY_B] = Rml::Input::KI_B;
-    keyMap[KEY_C] = Rml::Input::KI_C;
-    keyMap[KEY_D] = Rml::Input::KI_D;
-    keyMap[KEY_E] = Rml::Input::KI_E;
-    keyMap[KEY_F] = Rml::Input::KI_F;
-    keyMap[KEY_G] = Rml::Input::KI_G;
-    keyMap[KEY_H] = Rml::Input::KI_H;
-    keyMap[KEY_I] = Rml::Input::KI_I;
-    keyMap[KEY_J] = Rml::Input::KI_J;
-    keyMap[KEY_K] = Rml::Input::KI_K;
-    keyMap[KEY_L] = Rml::Input::KI_L;
-    keyMap[KEY_M] = Rml::Input::KI_M;
-    keyMap[KEY_N] = Rml::Input::KI_N;
-    keyMap[KEY_O] = Rml::Input::KI_O;
-    keyMap[KEY_P] = Rml::Input::KI_P;
-    keyMap[KEY_Q] = Rml::Input::KI_Q;
-    keyMap[KEY_R] = Rml::Input::KI_R;
-    keyMap[KEY_S] = Rml::Input::KI_S;
-    keyMap[KEY_T] = Rml::Input::KI_T;
-    keyMap[KEY_U] = Rml::Input::KI_U;
-    keyMap[KEY_V] = Rml::Input::KI_V;
-    keyMap[KEY_W] = Rml::Input::KI_W;
-    keyMap[KEY_X] = Rml::Input::KI_X;
-    keyMap[KEY_Y] = Rml::Input::KI_Y;
-    keyMap[KEY_Z] = Rml::Input::KI_Z;
-    keyMap[KEY_LEFT_BRACKET] = Rml::Input::KI_OEM_4;
-    keyMap[KEY_BACKSLASH] = Rml::Input::KI_OEM_5;
-    keyMap[KEY_RIGHT_BRACKET] = Rml::Input::KI_OEM_6;
-    keyMap[KEY_GRAVE] = Rml::Input::KI_OEM_3;
-    keyMap[KEY_SPACE] = Rml::Input::KI_SPACE;
-    keyMap[KEY_ESCAPE] = Rml::Input::KI_ESCAPE;
-    keyMap[KEY_ENTER] = Rml::Input::KI_RETURN;
-    keyMap[KEY_TAB] = Rml::Input::KI_TAB;
-    keyMap[KEY_BACKSPACE] = Rml::Input::KI_BACK;
-    keyMap[KEY_INSERT] = Rml::Input::KI_INSERT;
-    keyMap[KEY_DELETE] = Rml::Input::KI_DELETE;
-    keyMap[KEY_RIGHT] = Rml::Input::KI_RIGHT;
-    keyMap[KEY_LEFT] = Rml::Input::KI_LEFT;
-    keyMap[KEY_DOWN] = Rml::Input::KI_DOWN;
-    keyMap[KEY_UP] = Rml::Input::KI_UP;
-    keyMap[KEY_PAGE_UP] = Rml::Input::KI_PRIOR;
-    keyMap[KEY_PAGE_DOWN] = Rml::Input::KI_NEXT;
-    keyMap[KEY_HOME] = Rml::Input::KI_HOME;
-    keyMap[KEY_END] = Rml::Input::KI_END;
-    keyMap[KEY_CAPS_LOCK] = Rml::Input::KI_CAPITAL;
-    keyMap[KEY_SCROLL_LOCK] = Rml::Input::KI_SCROLL;
-    keyMap[KEY_NUM_LOCK] = Rml::Input::KI_NUMLOCK;
-    keyMap[KEY_PRINT_SCREEN] = Rml::Input::KI_PRINT;
-    keyMap[KEY_PAUSE] = Rml::Input::KI_PAUSE;
-    keyMap[KEY_F1] = Rml::Input::KI_F1;
-    keyMap[KEY_F2] = Rml::Input::KI_F2;
-    keyMap[KEY_F3] = Rml::Input::KI_F3;
-    keyMap[KEY_F4] = Rml::Input::KI_F4;
-    keyMap[KEY_F5] = Rml::Input::KI_F5;
-    keyMap[KEY_F6] = Rml::Input::KI_F6;
-    keyMap[KEY_F7] = Rml::Input::KI_F7;
-    keyMap[KEY_F8] = Rml::Input::KI_F8;
-    keyMap[KEY_F9] = Rml::Input::KI_F9;
-    keyMap[KEY_F10] = Rml::Input::KI_F10;
-    keyMap[KEY_F11] = Rml::Input::KI_F11;
-    keyMap[KEY_F12] = Rml::Input::KI_F12;
-    keyMap[KEY_LEFT_SHIFT] = Rml::Input::KI_LSHIFT;
-    keyMap[KEY_LEFT_CONTROL] = Rml::Input::KI_LCONTROL;
-    keyMap[KEY_LEFT_ALT] = Rml::Input::KI_LMETA;
-    keyMap[KEY_LEFT_SUPER] = Rml::Input::KI_LWIN;
-    keyMap[KEY_RIGHT_SHIFT] = Rml::Input::KI_RSHIFT;
-    keyMap[KEY_RIGHT_CONTROL] = Rml::Input::KI_RCONTROL;
-    keyMap[KEY_RIGHT_ALT] = Rml::Input::KI_RMETA;
-    keyMap[KEY_RIGHT_SUPER] = Rml::Input::KI_RWIN;
-    keyMap[KEY_KB_MENU] = Rml::Input::KI_RMENU;
-    keyMap[KEY_KP_0] = Rml::Input::KI_NUMPAD0;
-    keyMap[KEY_KP_1] = Rml::Input::KI_NUMPAD1;
-    keyMap[KEY_KP_2] = Rml::Input::KI_NUMPAD2;
-    keyMap[KEY_KP_3] = Rml::Input::KI_NUMPAD3;
-    keyMap[KEY_KP_4] = Rml::Input::KI_NUMPAD4;
-    keyMap[KEY_KP_5] = Rml::Input::KI_NUMPAD5;
-    keyMap[KEY_KP_6] = Rml::Input::KI_NUMPAD6;
-    keyMap[KEY_KP_7] = Rml::Input::KI_NUMPAD7;
-    keyMap[KEY_KP_8] = Rml::Input::KI_NUMPAD8;
-    keyMap[KEY_KP_9] = Rml::Input::KI_NUMPAD9;
-    keyMap[KEY_KP_DECIMAL] = Rml::Input::KI_DECIMAL;
-    keyMap[KEY_KP_DIVIDE] = Rml::Input::KI_DIVIDE;
-    keyMap[KEY_KP_MULTIPLY] = Rml::Input::KI_MULTIPLY;
-    keyMap[KEY_KP_SUBTRACT] = Rml::Input::KI_SUBTRACT;
-    keyMap[KEY_KP_ADD] = Rml::Input::KI_ADD;
-    keyMap[KEY_KP_ENTER] = Rml::Input::KI_RETURN;
-    keyMap[KEY_KP_EQUAL] = Rml::Input::KI_RETURN;
-    keyMap[KEY_VOLUME_UP] = Rml::Input::KI_VOLUME_UP;
-    keyMap[KEY_VOLUME_DOWN] = Rml::Input::KI_VOLUME_DOWN;
+	keyMap = {
+		{ KEY_COMMA, Rml::Input::KI_OEM_COMMA },
+		{ KEY_APOSTROPHE, Rml::Input::KI_OEM_7 },
+		{ KEY_MINUS, Rml::Input::KI_OEM_MINUS },
+		{ KEY_PERIOD, Rml::Input::KI_OEM_PERIOD },
+		{ KEY_SLASH, Rml::Input::KI_OEM_2 },
+		{ KEY_ZERO, Rml::Input::KI_0 },
+		{ KEY_ONE, Rml::Input::KI_1 },
+		{ KEY_TWO, Rml::Input::KI_2 },
+		{ KEY_THREE, Rml::Input::KI_3 },
+		{ KEY_FOUR, Rml::Input::KI_4 },
+		{ KEY_FIVE, Rml::Input::KI_5 },
+		{ KEY_SIX, Rml::Input::KI_6 },
+		{ KEY_SEVEN, Rml::Input::KI_7 },
+		{ KEY_EIGHT, Rml::Input::KI_8 },
+		{ KEY_NINE, Rml::Input::KI_9 },
+		{ KEY_SEMICOLON, Rml::Input::KI_OEM_1 },
+		{ KEY_EQUAL, Rml::Input::KI_OEM_PLUS },
+		{ KEY_A, Rml::Input::KI_A },
+		{ KEY_B, Rml::Input::KI_B },
+		{ KEY_C, Rml::Input::KI_C },
+		{ KEY_D, Rml::Input::KI_D },
+		{ KEY_E, Rml::Input::KI_E },
+		{ KEY_F, Rml::Input::KI_F },
+		{ KEY_G, Rml::Input::KI_G },
+		{ KEY_H, Rml::Input::KI_H },
+		{ KEY_I, Rml::Input::KI_I },
+		{ KEY_J, Rml::Input::KI_J },
+		{ KEY_K, Rml::Input::KI_K },
+		{ KEY_L, Rml::Input::KI_L },
+		{ KEY_M, Rml::Input::KI_M },
+		{ KEY_N, Rml::Input::KI_N },
+		{ KEY_O, Rml::Input::KI_O },
+		{ KEY_P, Rml::Input::KI_P },
+		{ KEY_Q, Rml::Input::KI_Q },
+		{ KEY_R, Rml::Input::KI_R },
+		{ KEY_S, Rml::Input::KI_S },
+		{ KEY_T, Rml::Input::KI_T },
+		{ KEY_U, Rml::Input::KI_U },
+		{ KEY_V, Rml::Input::KI_V },
+		{ KEY_W, Rml::Input::KI_W },
+		{ KEY_X, Rml::Input::KI_X },
+		{ KEY_Y, Rml::Input::KI_Y },
+		{ KEY_Z, Rml::Input::KI_Z },
+		{ KEY_LEFT_BRACKET, Rml::Input::KI_OEM_4 },
+		{ KEY_BACKSLASH, Rml::Input::KI_OEM_5 },
+		{ KEY_RIGHT_BRACKET, Rml::Input::KI_OEM_6 },
+		{ KEY_GRAVE, Rml::Input::KI_OEM_3 },
+		{ KEY_SPACE, Rml::Input::KI_SPACE },
+		{ KEY_ESCAPE, Rml::Input::KI_ESCAPE },
+		{ KEY_ENTER, Rml::Input::KI_RETURN },
+		{ KEY_TAB, Rml::Input::KI_TAB },
+		{ KEY_BACKSPACE, Rml::Input::KI_BACK },
+		{ KEY_INSERT, Rml::Input::KI_INSERT },
+		{ KEY_DELETE, Rml::Input::KI_DELETE },
+		{ KEY_RIGHT, Rml::Input::KI_RIGHT },
+		{ KEY_LEFT, Rml::Input::KI_LEFT },
+		{ KEY_DOWN, Rml::Input::KI_DOWN },
+		{ KEY_UP, Rml::Input::KI_UP },
+		{ KEY_PAGE_UP, Rml::Input::KI_PRIOR },
+		{ KEY_PAGE_DOWN, Rml::Input::KI_NEXT },
+		{ KEY_HOME, Rml::Input::KI_HOME },
+		{ KEY_END, Rml::Input::KI_END },
+		{ KEY_CAPS_LOCK, Rml::Input::KI_CAPITAL },
+		{ KEY_SCROLL_LOCK, Rml::Input::KI_SCROLL },
+		{ KEY_NUM_LOCK, Rml::Input::KI_NUMLOCK },
+		{ KEY_PRINT_SCREEN, Rml::Input::KI_PRINT },
+		{ KEY_PAUSE, Rml::Input::KI_PAUSE },
+		{ KEY_F1, Rml::Input::KI_F1 },
+		{ KEY_F2, Rml::Input::KI_F2 },
+		{ KEY_F3, Rml::Input::KI_F3 },
+		{ KEY_F4, Rml::Input::KI_F4 },
+		{ KEY_F5, Rml::Input::KI_F5 },
+		{ KEY_F6, Rml::Input::KI_F6 },
+		{ KEY_F7, Rml::Input::KI_F7 },
+		{ KEY_F8, Rml::Input::KI_F8 },
+		{ KEY_F9, Rml::Input::KI_F9 },
+		{ KEY_F10, Rml::Input::KI_F10 },
+		{ KEY_F11, Rml::Input::KI_F11 },
+		{ KEY_F12, Rml::Input::KI_F12 },
+		{ KEY_LEFT_SHIFT, Rml::Input::KI_LSHIFT },
+		{ KEY_LEFT_CONTROL, Rml::Input::KI_LCONTROL },
+		{ KEY_LEFT_ALT, Rml::Input::KI_LMETA },
+		{ KEY_LEFT_SUPER, Rml::Input::KI_LWIN },
+		{ KEY_RIGHT_SHIFT, Rml::Input::KI_RSHIFT },
+		{ KEY_RIGHT_CONTROL, Rml::Input::KI_RCONTROL },
+		{ KEY_RIGHT_ALT, Rml::Input::KI_RMETA },
+		{ KEY_RIGHT_SUPER, Rml::Input::KI_RWIN },
+		{ KEY_KB_MENU, Rml::Input::KI_RMENU },
+		{ KEY_KP_0, Rml::Input::KI_NUMPAD0 },
+		{ KEY_KP_1, Rml::Input::KI_NUMPAD1 },
+		{ KEY_KP_2, Rml::Input::KI_NUMPAD2 },
+		{ KEY_KP_3, Rml::Input::KI_NUMPAD3 },
+		{ KEY_KP_4, Rml::Input::KI_NUMPAD4 },
+		{ KEY_KP_5, Rml::Input::KI_NUMPAD5 },
+		{ KEY_KP_6, Rml::Input::KI_NUMPAD6 },
+		{ KEY_KP_7, Rml::Input::KI_NUMPAD7 },
+		{ KEY_KP_8, Rml::Input::KI_NUMPAD8 },
+		{ KEY_KP_9, Rml::Input::KI_NUMPAD9 },
+		{ KEY_KP_DECIMAL, Rml::Input::KI_DECIMAL },
+		{ KEY_KP_DIVIDE, Rml::Input::KI_DIVIDE },
+		{ KEY_KP_MULTIPLY, Rml::Input::KI_MULTIPLY },
+		{ KEY_KP_SUBTRACT, Rml::Input::KI_SUBTRACT },
+		{ KEY_KP_ADD, Rml::Input::KI_ADD },
+		{ KEY_KP_ENTER, Rml::Input::KI_RETURN },
+		{ KEY_KP_EQUAL, Rml::Input::KI_RETURN },
+		{ KEY_VOLUME_UP, Rml::Input::KI_VOLUME_UP },
+		{ KEY_VOLUME_DOWN, Rml::Input::KI_VOLUME_DOWN },
+	};
 }
 
 double RaylibSystemInterface::GetElapsedTime() {

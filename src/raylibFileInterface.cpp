@@ -2,7 +2,7 @@
 #include "raylibFileInterface.h"
 #include <fstream>
 
-const std::filesystem::path dir("./assets/");
+const std::filesystem::path dir("../../assets/");
 
 inline bool StartsWith(const std::string &text, const std::string &ending) {
     if (ending.size() > text.size()) {
@@ -21,9 +21,12 @@ inline void RemoveText(std::string &text, const std::string &toRemove) {
 }
 
 Rml::FileHandle RaylibFileInterface::Open(const Rml::String &path) {
-    auto stream = new std::fstream(ParsePath(path), std::ios::in);
+	auto stream = new std::fstream(ParsePath(path), std::ios::binary | std::ios::in);
 
-    return (Rml::FileHandle)stream;
+	if (stream->is_open()) {
+		return (Rml::FileHandle)stream;
+	}
+	return (Rml::FileHandle)0;
 }
 
 void RaylibFileInterface::Close(Rml::FileHandle file) {
@@ -33,7 +36,9 @@ void RaylibFileInterface::Close(Rml::FileHandle file) {
 }
 
 size_t RaylibFileInterface::Read(void* buffer, std::size_t size, Rml::FileHandle file) {
-    return (*(std::fstream*)file).readsome(reinterpret_cast<char*>(buffer), size);
+	size_t read_size = fmin(Length(file) - Tell(file), size);
+	(*(std::fstream *)file).read(reinterpret_cast<char *>(buffer), read_size);
+	return read_size;
 }
 
 bool RaylibFileInterface::Seek(Rml::FileHandle file, long offset, int origin) {
