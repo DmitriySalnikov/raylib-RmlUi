@@ -4,15 +4,15 @@
 #include "RmlUi/Core/Types.h"
 
 namespace Example {
-    const char* GetWindowTitle();
-    Rml::Vector2i GetWindowSize();
-    void Initialize();
-    void DeInitialize();
+const char* GetWindowTitle();
+Rml::Vector2i GetWindowSize();
+void Initialize();
+void DeInitialize();
 
-    void Update(float delta);
-    void Render();
-    void ToggleDebugger();
-    bool RunProgram();
-    void StopProgram();
-}
-#endif //RMLUI_EXAMPLE_EXAMPLE_H
+void Update(float delta);
+void Render();
+void ToggleDebugger();
+bool RunProgram();
+void StopProgram();
+} // namespace Example
+#endif // RMLUI_EXAMPLE_EXAMPLE_H

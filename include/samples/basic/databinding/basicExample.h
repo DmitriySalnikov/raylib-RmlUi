@@ -6,6 +6,6 @@
 #include <numeric>
 
 namespace BasicExample {
-    bool Initialize(Rml::Context* context);
+bool Initialize(Rml::Context* context);
 }
-#endif //RMLUI_EXAMPLE_BASICEXAMPLE_H
+#endif // RMLUI_EXAMPLE_BASICEXAMPLE_H

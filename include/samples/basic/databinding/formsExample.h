@@ -4,6 +4,6 @@
 #include "RmlUi/Core/Context.h"
 
 namespace FormsExample {
-    bool Initialize(Rml::Context* context);
+bool Initialize(Rml::Context* context);
 }
-#endif //RMLUI_EXAMPLE_FORMSEXAMPLE_H
+#endif // RMLUI_EXAMPLE_FORMSEXAMPLE_H

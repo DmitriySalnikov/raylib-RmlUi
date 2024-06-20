@@ -4,8 +4,8 @@
 #include "RmlUi/Core/Context.h"
 
 namespace InvadersExample {
-    bool Initialize(Rml::Context* context);
-    void Update(const double dt);
-}
+bool Initialize(Rml::Context* context);
+void Update(const double dt);
+} // namespace InvadersExample
 
-#endif //RMLUI_EXAMPLE_INVADERSEXAMPLE_H
+#endif // RMLUI_EXAMPLE_INVADERSEXAMPLE_H

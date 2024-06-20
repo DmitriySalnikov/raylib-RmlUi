@@ -127,9 +127,8 @@ FontFaceBitmap* GetFontFaceHandle(const String& family, FontStyle style, FontWei
 
 FontFaceBitmap::FontFaceBitmap(String family, FontStyle style, FontWeight weight, FontMetrics metrics, Texture texture, Vector2f texture_dimensions,
 	FontGlyphs&& glyphs, FontKerning&& kerning) :
-	family(family),
-	style(style), weight(weight), metrics(metrics), texture(texture), texture_dimensions(texture_dimensions), glyphs(std::move(glyphs)),
-	kerning(std::move(kerning))
+	family(family), style(style), weight(weight), metrics(metrics), texture(texture), texture_dimensions(texture_dimensions),
+	glyphs(std::move(glyphs)), kerning(std::move(kerning))
 {}
 
 int FontFaceBitmap::GetStringWidth(const String& string, Character previous_character)

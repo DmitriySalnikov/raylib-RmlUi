@@ -5,21 +5,19 @@
 
 class ExampleEvent : public Rml::EventListener {
 public:
-    void ProcessEvent(Rml::Event &event) override;
+	void ProcessEvent(Rml::Event& event) override;
 
-    void OnDetach(Rml::Element* /*element*/) override;
+	void OnDetach(Rml::Element* /*element*/) override;
 
-    explicit ExampleEvent(const Rml::String &value);
+	explicit ExampleEvent(const Rml::String& value);
 
 private:
-    Rml::String value;
+	Rml::String value;
 };
 
 class ExampleEventInstancer : public Rml::EventListenerInstancer {
 public:
-    Rml::EventListener* InstanceEventListener(const Rml::String &value, Rml::Element* /*element*/) override {
-        return new ExampleEvent(value);
-    }
+	Rml::EventListener* InstanceEventListener(const Rml::String& value, Rml::Element* /*element*/) override { return new ExampleEvent(value); }
 };
 
-#endif //RMLUI_EXAMPLE_EVENT_H
+#endif // RMLUI_EXAMPLE_EVENT_H
